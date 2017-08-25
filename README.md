@@ -12,5 +12,16 @@ Attempted to finish an input event but the input event receiver has already been
 # 使用方法
 直接clone下来使用。
 
+
+```
+ //show
+ ContentLoadingDialog.Builder builder = new ContentLoadingDialog.Builder(this);
+ mContentLoadingDialog = builder.setMessage("Builder Message").setCancelable(true).create();
+ mContentLoadingDialog.showLoadingDialog();
+ 
+ //hide
+  mContentLoadingDialog.hideLoadingDialog();
+```
+
 # 效果图
 ![](https://github.com/iAmeng/ContentLoadingDialog/blob/master/captures/capture.png)
