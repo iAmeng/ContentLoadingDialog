@@ -13,3 +13,4 @@ Attempted to finish an input event but the input event receiver has already been
 直接clone下来使用。
 
 # 效果图
+![](https://github.com/iAmeng/ContentLoadingDialog/blob/master/captures/capture.png)
