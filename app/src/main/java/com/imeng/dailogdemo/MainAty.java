@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 
+import com.imeng.mycustomcontentloadingdialog.ContentLoadingDialog;
 import com.imeng.mycustomcontentloadingdialog.MyLoadingDialog;
 
 import butterknife.ButterKnife;
@@ -20,6 +21,7 @@ import butterknife.OnClick;
 public class MainAty extends AppCompatActivity {
 
     private MyLoadingDialog mLoadingDialog = null;
+    private ContentLoadingDialog mContentLoadingDialog = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class MainAty extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.progress_dialog, R.id.custom_loadingdialog_show_bt, R.id.custom_loadingdialog_hide_bt})
+    @OnClick({R.id.progress_dialog, R.id.custom_loadingdialog_show_bt, R.id.custom_loadingdialog_hide_bt, R.id.content_loading_dialog_show,R.id.content_loading_dialog_hide})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.custom_loadingdialog_show_bt:
@@ -40,8 +42,28 @@ public class MainAty extends AppCompatActivity {
             case R.id.progress_dialog:
                 showProgressDialog();
                 break;
+            case R.id.content_loading_dialog_show:
+                showContentLoadingDialog();
+                break;
+            case R.id.content_loading_dialog_hide:
+                hideContentLoadingDialog();
+                break;
             default:
                 break;
+        }
+    }
+
+    private void showContentLoadingDialog() {
+        if (mContentLoadingDialog == null) {
+            ContentLoadingDialog.Builder builder = new ContentLoadingDialog.Builder(this);
+            mContentLoadingDialog = builder.setMessage("Builder Message").setCancelable(true).create();
+        }
+        mContentLoadingDialog.showLoadingDialog();
+    }
+
+    private void hideContentLoadingDialog() {
+        if (mContentLoadingDialog != null) {
+            mContentLoadingDialog.hideLoadingDialog();
         }
     }
 

@@ -4,4 +4,11 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="ContentLoadDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/content_loading_dialog_progressbar</item>
+        <item name="android:textColorPrimary">@color/content_loading_dialog_tesxt</item>
+        <item name="android:background">@color/content_loading_dialog_background</item>
+    </style>
+
+
 </resources>

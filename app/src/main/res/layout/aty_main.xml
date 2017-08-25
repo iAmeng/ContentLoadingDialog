@@ -23,5 +23,16 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"/>
 
+    <Button
+        android:id="@+id/content_loading_dialog_show"
+        android:text="contnet_loading_dialog_show"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"/>
+
+    <Button
+        android:id="@+id/content_loading_dialog_hide"
+        android:text="contnet_loading_dialog_hide"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"/>
 
 </LinearLayout>

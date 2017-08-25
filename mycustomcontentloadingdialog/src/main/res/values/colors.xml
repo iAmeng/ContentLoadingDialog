@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="content_loading_dialog_background">#3F51B5</color>
+    <color name="content_loading_dialog_progressbar">#303F9F</color>
+    <color name="content_loading_dialog_tesxt">#FF4081</color>
+</resources>
